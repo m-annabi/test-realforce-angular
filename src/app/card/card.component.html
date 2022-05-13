@@ -1,0 +1,21 @@
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4 p-2">
+      <img src="{{movie.Poster}}"  width="100" height="200" class="card-img"  alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.Title}}</h5>
+        <p class="card-text">{{movie.Year}} | {{movie.Type}}</p>
+        <p class="card-text">{{movie.Actors}}</p>
+        <button type="button" (click)="naviagateTo()" class="btn btn-warning btn-sm"><i class="bi bi-gear me-2"></i>IMdb</button>
+        <button *ngIf="!movie.listed && type === 'result'" (click)="updateMovieStatus()" type="button" class="btn btn-success btn-sm ms-2">
+          <i class="bi bi-plus-lg me-2"></i>Add</button>
+        <button *ngIf="movie.listed && type === 'result'" (click)="updateMovieStatus()" type="button" class="btn btn-primary btn-sm ms-2">Listed</button>
+        <button *ngIf="movie.listed && type === 'toWatch'"
+                (click)="updateMovieStatus()"
+                type="button" class="btn btn-danger btn-sm ms-2"><i class="bi bi-x-lg me-2"></i>Remove</button>
+      </div>
+    </div>
+  </div>
+</div>

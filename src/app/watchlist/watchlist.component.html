@@ -1,0 +1,5 @@
+<div class="row">
+  <div *ngFor="let movie of movies">
+    <app-card *ngIf="movie.listed" [movie]="movie" [type]="'toWatch'"></app-card>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <form  [formGroup]="searchForm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/real.png" alt="" width="170" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto m-lg-2">
+          <li class="m-lg-2">
+            <select class="form-select" formControlName="year" aria-label="Default select example">
+              <option value="" disabled selected>Year</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+            </select>
+          </li>
+          <li class="m-lg-2">
+            <select class="form-select" formControlName="type" aria-label="Default select example">
+              <option value="" disabled selected>Types</option>
+              <option value="movie">movie</option>
+              <option value="series">series</option>
+            </select>
+          </li>
+          <li class="m-lg-2">
+            <div class="d-flex ml-2">
+              <input class="form-control me-2" formControlName="title" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" (click)="search()">Search</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</nav>

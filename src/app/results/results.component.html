@@ -1,0 +1,5 @@
+<div class="row">
+  <div *ngFor="let movie of movies" class="col-lg-6">
+    <app-card *ngIf="movie" [movie]="movie" [type]="'result'"></app-card>
+  </div>
+</div>
